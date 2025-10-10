@@ -1154,3 +1154,30 @@ ul {
     height: 300px;
   }
 }
+
+/* Estilos para la lista de servicios */
+.service-card ul {
+  list-style: none; /* Elimina las viñetas por defecto del navegador */
+  margin-bottom: 25px;
+  padding-left: 0;
+}
+
+.service-card ul li {
+  position: relative;
+  padding-left: 20px; /* Espacio para el pseudo-elemento */
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--gray);
+}
+
+.service-card ul li::before {
+  content: ''; /* El contenido del pseudo-elemento, en este caso vacío */
+  position: absolute;
+  top: 8px; /* Ajusta la posición vertical del "punto" */
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary-light); /* Color del "punto" */
+  border-radius: 50%;
+}

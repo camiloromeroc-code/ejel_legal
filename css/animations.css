@@ -146,40 +146,41 @@
    CLASES DE ANIMACIÓN
 ------------------------------ */
 
-/* Fade In */
-.animate-fade-in {
+/* CLASE BASE para todos los elementos que se animan al aparecer */
+.animated-element {
   opacity: 0;
+  will-change: opacity, transform;
+}
+
+/* Clases que definen el tipo de animación */
+.animate-fade-in {
   animation: fadeIn 0.8s ease-out forwards;
 }
 
-/* Fade In Up */
 .animate-fade-in-up {
-  opacity: 0;
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
-/* Slide Left */
 .animate-slide-left {
-  opacity: 0;
   animation: slideLeft 0.8s ease-out forwards;
 }
 
-/* Slide Right */
 .animate-slide-right {
-  opacity: 0;
   animation: slideRight 0.8s ease-out forwards;
 }
 
-/* Scale In */
 .animate-scale-in {
-  opacity: 0;
   animation: scaleIn 0.6s ease-out forwards;
 }
 
-/* Bounce In */
 .animate-bounce-in {
-  opacity: 0;
   animation: bounceIn 0.8s ease-out forwards;
+}
+
+/* ESTADO FINAL ACTIVADO POR JAVASCRIPT */
+.is-visible {
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 /* ------------------------------
@@ -266,12 +267,6 @@
 /* ------------------------------
    ESTADOS DE VISIBILIDAD
 ------------------------------ */
-
-/* Estado visible después del scroll */
-.is-visible {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-}
 
 /* Oculto inicialmente */
 .hidden {
@@ -435,11 +430,9 @@
 
 /* Reducir animaciones en mobile */
 @media (max-width: 768px) {
-  .animate-fade-in,
-  .animate-fade-in-up,
-  .animate-slide-left,
-  .animate-slide-right {
+  .animated-element {
     animation-duration: 0.5s;
+    transition-duration: 0.5s;
   }
   
   /* Reducir delays en mobile */

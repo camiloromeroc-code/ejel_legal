@@ -289,7 +289,8 @@ ul {
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: var(--shadow);
-  height: 500px;
+  height: 90%;
+  width: 100%;
   background: linear-gradient(135deg, #3498db 0%, #1abc9c 100%);
   display: flex;
   align-items: center;
@@ -312,23 +313,23 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(44, 62, 80, 0.1), transparent); /* De 0.2 a 0.1 */
+  background: linear-gradient(to right, rgba(44, 62, 80, 0.6), transparent);
   z-index: 1;
 }
 
 .stats-cards {
   position: absolute;
-  bottom: 30px;
-  left: 30px;
+  bottom: 10px;
+  left: 10px;
   z-index: 2;
   display: flex;
-  gap: 20px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
 .stat-card {
-  background: white;
-  padding: 15px 25px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 5px 10px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -899,12 +900,7 @@ ul {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
-  .hero-image {
-    height: 400px;
-    margin-top: 40px;
-  }
-  
+   
   .team-image {
     justify-self: center;
     max-width: 350px;
@@ -1013,22 +1009,10 @@ ul {
   }
   
   .hero-image {
-    height: 350px;
+    height: 240px;
+    width: 100%; 
   }
-  
-  .stats-cards {
-    flex-direction: row;
-    gap: 10px;
-    left: 15px;
-    bottom: 15px;
-    right: 15px;
-  }
-  
-  .stat-card {
-    flex: 1;
-    padding: 10px 15px;
-  }
-  
+    
   .stat-number {
     font-size: 1.5rem;
   }
@@ -1157,15 +1141,6 @@ ul {
     padding: 14px 28px;
     font-size: 1rem;
   }
-  
-  .stats-cards {
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .stat-card {
-    padding: 12px 20px;
-  }
 }
 
 /* Landscape móvil */
@@ -1174,9 +1149,6 @@ ul {
     min-height: auto;
   }
   
-  .hero-container {
-    padding: 40px 0;
-  }
   
   .hero-image {
     height: 300px;

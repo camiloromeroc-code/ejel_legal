@@ -361,6 +361,7 @@
       </div>
 
       <div class="contact-container">
+        <!-- Información de contacto -->
         <div class="contact-info">
           <article class="contact-card animate-fade-in-up">
             <div class="contact-icon">
@@ -376,7 +377,7 @@
               <i class="fas fa-envelope" aria-hidden="true"></i>
             </div>
             <h3>Email</h3>
-            <p><a href="mailto:ccrc83@gmail.com.co">notificaciones@ejelegal.com.co</a></p>
+            <p><a href="mailto:notificaciones@ejelegal.com.co">notificaciones@ejelegal.com.co</a></p>
             <p>Respuesta en 24 horas</p>
           </article>
 
@@ -388,30 +389,17 @@
             <p>Lunes a Viernes</p>
             <p>8:00 AM – 6:00 PM</p>
           </article>
-
-          <!--<div class="social-links animate-fade-in-up delay-3">
-            <h3>Síguenos</h3>
-            <div class="social-icons">
-              <a href="https://www.facebook.com/share/17Vga5kU3e/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <i class="fab fa-facebook-f" aria-hidden="true"></i>
-              </a>
-              <a href="https://www.instagram.com/ejelegal.co?igsh=MTh4enZhYWVya2RuOA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <i class="fab fa-instagram" aria-hidden="true"></i>
-              </a>
-              <a href="https://youtube.com/@ejelegal?si=OEGDw9TTr7R6FIYo" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                <i class="fab fa-youtube" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>-->
         </div>
 
+        <!-- Formulario de contacto -->
         <div class="contact-form">
-          <form id="contactForm" class="animate-fade-in-up"
-            action="https://formsubmit.co/notificaciones@ejelegal.com.co" method="POST">
-            <!-- FormSubmit Config -->
-            <input type="hidden" name="_subject" value="Nueva consulta desde el sitio web EJE LEGAL">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
+          <form id="contactForm" class="animate-fade-in-up" action="https://api.web3forms.com/submit" method="POST">
+
+            <!-- Configuración de Web3Forms -->
+            <input type="hidden" name="access_key" value="26da6ae7-d441-471e-bcfa-ca57751c4934">
+            <input type="hidden" name="subject" value="Nueva consulta desde el sitio web EJE LEGAL">
+            <input type="hidden" name="from_name" value="Sitio Web EJE LEGAL">
+            <input type="hidden" name="redirect" value="https://ejelegal.com.co/gracias.html">
 
             <div class="form-group">
               <label for="name">Nombre completo *</label>
@@ -441,6 +429,7 @@
                 <option value="comercial">Derecho Comercial</option>
                 <option value="familia">Derecho Familiar</option>
                 <option value="administrativo">Derecho Administrativo</option>
+                <option value="otro">Otro</option>
               </select>
             </div>
 
@@ -457,6 +446,7 @@
       </div>
     </div>
   </section>
+
 
   <!-- Footer Moderno -->
   <footer class="footer">
